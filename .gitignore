@@ -1,0 +1,41 @@
+# Build
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.obj
+*.exe
+*.dll
+*.pdb
+*.idb
+*.lib
+*.ilk
+*.log
+*.sdf
+*.tlog
+*.pch
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.opensdf
+*.vcxproj.user
+
+# Backup / Cache
+*.bak
+*.tmp
+*.cache
+*.log
+*.db
+
+# Sistema
+Thumbs.db
+.DS_Store
+
+# Otros
+*.zip
+*.rar
+*.7z
+*.blend1
