@@ -44,7 +44,7 @@ void Frame::animateStep(int i_max_steps) {
     if (i_curr_ >= i_max_steps) {
         playIndex_++;
         if (playIndex_ > frameIndex_ - 2) {
-            std::printf("terminó la animación\n");
+            std::printf("termino la animacion\n");
             playIndex_ = 0;
             playing_ = false;
         }
@@ -91,7 +91,7 @@ void Frame::appendKeyToFile(const Key& frame, int index) {
 
 void Frame::saveCurrent(float movX, float movY, float giro) {
     if (frameIndex_ >= MAX_FRAMES) {
-        std::printf("Límite de frames alcanzado (%d).\n", MAX_FRAMES);
+        std::printf("Lï¿½mite de frames alcanzado (%d).\n", MAX_FRAMES);
         return;
     }
     frames_[frameIndex_].movX = movX;
@@ -105,7 +105,7 @@ void Frame::saveCurrent(float movX, float movY, float giro) {
 void Frame::loadFromDisk() {
     std::ifstream file(archivo_);
     if (!file.is_open()) {
-        std::printf("No se encontró %s, se creará al guardar.\n", archivo_.c_str());
+        std::printf("No se encontro %s, se creara al guardar.\n", archivo_.c_str());
         return;
     }
     frameIndex_ = 0;

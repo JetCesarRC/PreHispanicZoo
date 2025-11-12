@@ -18,7 +18,7 @@ Skybox::Skybox(std::vector<std::string> faceLocations)
         unsigned char* texData = stbi_load(faceLocations[i].c_str(), &width, &height, &bitDepth, 0);
         if (!texData)
         {
-            printf("No se encontró: %s\n", faceLocations[i].c_str());
+            printf("No se encontro: %s\n", faceLocations[i].c_str());
             return;
         }
 

@@ -15,7 +15,7 @@ void Model::LoadModel(const std::string& fileName)
 
     if (!scene)
     {
-        printf("Falló en cargar el modelo: %s, %s \n", fileName.c_str(), importer.GetErrorString());
+        printf("Fallo en cargar el modelo: %s, %s \n", fileName.c_str(), importer.GetErrorString());
         return;
     }
 
@@ -156,7 +156,7 @@ void Model::LoadMaterials(const aiScene* scene)
                 {
                     if (!TextureList[i]->LoadTextureA())
                     {
-                        printf("Falló en cargar la Textura :%s\n", texPath.c_str());
+                        printf("Fallï¿½ en cargar la Textura :%s\n", texPath.c_str());
                         delete TextureList[i];
                         TextureList[i] = nullptr;
                     }
@@ -165,7 +165,7 @@ void Model::LoadMaterials(const aiScene* scene)
                 {
                     if (!TextureList[i]->LoadTexture())
                     {
-                        printf("Falló en cargar la Textura :%s\n", texPath.c_str());
+                        printf("Fallï¿½ en cargar la Textura :%s\n", texPath.c_str());
                         delete TextureList[i];
                         TextureList[i] = nullptr;
                     }

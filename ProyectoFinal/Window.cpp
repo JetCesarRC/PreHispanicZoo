@@ -42,7 +42,7 @@ int Window::Initialise()
 {
     if (!glfwInit())
     {
-        printf("Falló inicializar GLFW\n");
+        printf("Fallo inicializar GLFW\n");
         glfwTerminate();
         return 1;
     }
@@ -69,7 +69,7 @@ int Window::Initialise()
     glewExperimental = GL_TRUE;
     if (glewInit() != GLEW_OK)
     {
-        printf("Falló inicialización de GLEW\n");
+        printf("Fallo inicializacion de GLEW\n");
         glfwDestroyWindow(mainWindow);
         glfwTerminate();
         return 1;

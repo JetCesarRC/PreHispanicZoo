@@ -22,13 +22,13 @@ Texture::Texture(const char* fileLoc)
 
 bool Texture::LoadTexture()
 {
-    // Voltear verticalmente las imágenes 2D (los letreros)
+    // Voltear verticalmente las imagenes 2D (los letreros)
     stbi_set_flip_vertically_on_load(true);
 
     unsigned char* texData = stbi_load(fileLocation, &width, &height, &bitDepth, 0);
     if (!texData)
     {
-        printf("No se encontró el archivo de textura: %s\n", fileLocation);
+        printf("No se encontro el archivo de textura: %s\n", fileLocation);
         return false;
     }
 
