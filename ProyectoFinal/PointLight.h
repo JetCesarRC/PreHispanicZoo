@@ -1,33 +1,33 @@
 #pragma once
-
 #include "Light.h"
-#include <glm.hpp>
 
-class PointLight : public Light
+class PointLight :
+	public Light
 {
 public:
-    PointLight();
-    PointLight(GLfloat red, GLfloat green, GLfloat blue,
-        GLfloat ambientIntensity, GLfloat diffuseIntensity,
-        GLfloat xPos, GLfloat yPos, GLfloat zPos,
-        GLfloat con, GLfloat lin, GLfloat exp);
+	PointLight();
+	PointLight(GLfloat red, GLfloat green, GLfloat blue,
+		GLfloat aIntensity, GLfloat dIntensity,
+		GLfloat xPos, GLfloat yPos, GLfloat zPos,
+		GLfloat con, GLfloat lin, GLfloat exp);
 
-    void UseLight(GLuint ambientIntensityLocation, GLuint colorLocation,
-        GLuint diffuseIntensityLocation, GLuint positionLocation,
-        GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation);
+	void UseLight(GLfloat ambientIntensityLocation, GLfloat ambientcolorLocation,
+		GLfloat diffuseIntensityLocation, GLfloat positionLocation,
+		GLfloat constantLocation, GLfloat linearLocation, GLfloat exponentLocation);
+	void SetPosition(const glm::vec3& pos);
+	void SetPosition(GLfloat x, GLfloat y, GLfloat z);
 
-    void SetPosition(const glm::vec3& pos);
-    void TurnOn();
-    void TurnOff();
-    void Toggle();
-    bool IsOn() const { return isOn; }
+	void TurnOn();
+	void TurnOff();
+	void Toggle();
+	bool IsOn() const { return isOn; }
+	
 
-    ~PointLight() override = default;
+	~PointLight();
 
 protected:
-    glm::vec3 position;
-    GLfloat constant;
-    GLfloat linear;
-    GLfloat exponent;
-    bool isOn;
+	glm::vec3 position;
+	GLfloat constant, linear, exponent;
+	bool isOn = true;
 };
+

@@ -144,7 +144,7 @@
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="PointLight.h" />
-    <ClInclude Include="ShaderLight.h" />
+    <ClInclude Include="Shader_light.h" />
     <ClInclude Include="Skybox.h" />
     <ClInclude Include="SpotLight.h" />
     <ClInclude Include="stb_image.h" />
@@ -157,19 +157,19 @@
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Material.cpp" />
-    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Mesh_tn.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="ProyectoFinal.cpp" />
-    <ClCompile Include="ShaderLight.cpp" />
+    <ClCompile Include="Shader_light.cpp" />
     <ClCompile Include="Skybox.cpp" />
     <ClCompile Include="SpotLight.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\ShaderLight.frag" />
-    <None Include="shaders\ShaderLight.vert" />
+    <None Include="Shaders\shader_light.frag" />
+    <None Include="Shaders\shader_light.vert" />
     <None Include="shaders\Skybox.frag" />
     <None Include="shaders\Skybox.vert" />
   </ItemGroup>

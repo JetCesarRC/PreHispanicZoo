@@ -6,18 +6,15 @@
 class Light
 {
 public:
-    Light();
-    Light(GLfloat red, GLfloat green, GLfloat blue,
-        GLfloat ambientIntensity, GLfloat diffuseIntensity);
+	Light();
+	Light(GLfloat red, GLfloat green, GLfloat blue, 
+			GLfloat aIntensity, GLfloat dIntensity);
 
-    virtual ~Light() = default;
-
-    void UseLight(GLuint ambientIntensityLocation,
-        GLuint colorLocation,
-        GLuint diffuseIntensityLocation);
+	~Light();
 
 protected:
-    glm::vec3 color;
-    GLfloat ambientIntensity;
-    GLfloat diffuseIntensity;
+	glm::vec3 color;
+	GLfloat ambientIntensity;
+	GLfloat diffuseIntensity;
 };
+
